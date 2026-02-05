@@ -3,20 +3,32 @@ import { sleep, group } from "k6";
 
 export const options = {
   scenarios: {
-    ramp_fe_pages: {
-      executor: "ramping-vus",
-      startVUs: 500,
-      stages: [
-        { duration: "5m", target: 100 },
-        { duration: "5m", target: 100 },
-        // { duration: "30s", target: 20 },
-        // { duration: "1m", target: 20 },
-        // { duration: "30s", target: 0 },
-      ],
-      gracefulRampDown: "10s",
+    sfl_users: {
+      executor: "constant-vus",
+      vus: 500,
+      duration: "5m",
+      gracefulStop: "10s",
     },
   },
 };
+
+// export const options = {
+//   scenarios: {
+//     ramp_fe_pages: {
+//       executor: "ramping-vus",
+//       startVUs: 0,
+//       stages: [
+//         { duration: "5m", target: 500 },
+//         // { duration: "5m", target: 100 },
+//         // { duration: "30s", target: 20 },
+//         // { duration: "1m", target: 20 },
+//         // { duration: "30s", target: 0 },
+//       ],
+//       gracefulRampDown: "10s",
+//     },    
+
+//   },
+// };
 
 const BASE_URL = "https://talent-dev.dealls.com";
 const UUID = "5f5d2f66-654f-4389-bcd5-fa91465d1429";

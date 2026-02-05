@@ -1,6 +1,18 @@
 import http from "k6/http";
 import { sleep, group } from "k6";
 
+
+// export const options = {
+//   scenarios: {
+//     sfl_users: {
+//       executor: "constant-vus",
+//       vus: 500,
+//       duration: "5m",
+//       gracefulStop: "10s",
+//     },
+//   },
+// };
+
 export const options = {
   scenarios: {
     ramp_fe_pages: {
