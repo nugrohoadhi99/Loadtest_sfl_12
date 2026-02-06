@@ -35,40 +35,46 @@ const UUID = "5f5d2f66-654f-4389-bcd5-fa91465d1429";
 
 export default function () {
   group("FE Flow Pages", () => {
-    http.get(`${BASE_URL}/sign-in`, {
-      tags: { name: "fe_sign-in" },
-    });
-    sleep(1);
+
+    // http.get(`${BASE_URL}/sign-in`, {
+    //   tags: { name: "fe_sign-in" },
+    // });
+    // sleep(1);
 
     http.get(`${BASE_URL}/sfl`, {
       tags: { name: "fe_sfl_landing" },
     });
     sleep(1);
 
-    http.get(`${BASE_URL}/sfl/login/12`, {
-      tags: { name: "fe_sfl_dashboard" },
-    });
-    sleep(1);
+    // http.get(`${BASE_URL}/sfl/login/12`, {
+    //   tags: { name: "fe_sfl_dashboard" },
+    // });
+    // sleep(1);
 
-    http.get(`${BASE_URL}/sfl/quiz/12/wait/quiz-fsecond-battle`, {
-      tags: { name: "fe_waiting_room" },
-    });
-    sleep(1);
+    // http.get(`${BASE_URL}/sfl/quiz/12/wait/quiz-fsecond-battle`, {
+    //   tags: { name: "fe_waiting_room" },
+    // });
+    // sleep(1);
 
-    http.get(`${BASE_URL}/sfl/quiz/12/quiz-second-battle/${UUID}`, {
-      tags: { name: "fe_quiz_room" },
-    });
-    sleep(1);
+    // http.get(`${BASE_URL}/sfl/quiz/12/quiz-second-battle/${UUID}`, {
+    //   tags: { name: "fe_quiz_room" },
+    // });
+    // sleep(1);
 
-    http.get(`${BASE_URL}/sfl/quiz/12/finish`, {
-      tags: { name: "finish" },
-    });
-    sleep(1);
+    // http.get(`${BASE_URL}/sfl/quiz/12/finish`, {
+    //   tags: { name: "finish" },
+    // });
+    // sleep(1);
 
-    http.get(`${BASE_URL}/sfl/login/12`, {
-      tags: { name: "fe_sfl_dashboard" },
-    });
-    sleep(1);
+    // http.get(`${BASE_URL}/sfl/login/12`, {
+    //   tags: { name: "fe_sfl_dashboard" },
+    // });
+    // sleep(1);
+
+    // http.get(`${BASE_URL}/sfl/login/12`, {
+    //   tags: { name: "fe_sfl_dashboard" },
+    // });
+    // sleep(1);
 
   });
 }
